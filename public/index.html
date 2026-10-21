@@ -4,12 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>5W2H - Plano de Ação (WMS)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>5W2H — Plano de Ação</h1>
-    <p class="subtitulo">Módulo de planejamento do WMS</p>
+    <div class="header-conteudo">
+      <div class="logo">5W2H</div>
+      <div>
+        <h1>Plano de Ação</h1>
+        <p class="subtitulo">Módulo de planejamento do WMS</p>
+      </div>
+    </div>
   </header>
 
   <main>
@@ -18,33 +25,28 @@
       <form id="plano-form">
         <input type="hidden" id="plano-id" />
 
-        <label>O quê? (What) *
+        <label>O quê? <span class="rotulo-en">(What)</span>
           <input type="text" id="o_que" required placeholder="Ex: Reorganizar o layout do estoque" />
         </label>
 
-        <label>Por quê? (Why)
+        <label>Por quê? <span class="rotulo-en">(Why)</span>
           <textarea id="por_que" placeholder="Motivo / objetivo"></textarea>
         </label>
 
         <div class="grid-2">
-          <label>Onde? (Where)
+          <label>Onde? <span class="rotulo-en">(Where)</span>
             <input type="text" id="onde" placeholder="Ex: Armazém 3" />
           </label>
-          <label>Quando? (When)
+          <label>Quando? <span class="rotulo-en">(When)</span>
             <input type="date" id="quando" />
           </label>
         </div>
 
-        <div class="grid-2">
-          <label>Quem? (Who)
-            <input type="text" id="quem" placeholder="Responsável" />
-          </label>
-          <label>Quanto custa? (How much)
-            <input type="text" id="quanto_custa" placeholder="Ex: R$ 1.500,00" />
-          </label>
-        </div>
+        <label>Quem? <span class="rotulo-en">(Who)</span>
+          <input type="text" id="quem" placeholder="Responsável" />
+        </label>
 
-        <label>Como? (How)
+        <label>Como? <span class="rotulo-en">(How)</span>
           <textarea id="como" placeholder="Método / etapas"></textarea>
         </label>
 
@@ -68,7 +70,6 @@
       <div id="planos-lista" class="cards"></div>
     </section>
   </main>
-
-  <script src="app.js"></script>
 </body>
+<script src="app.js"></script>
 </html>
