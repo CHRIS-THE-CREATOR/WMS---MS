@@ -6,7 +6,7 @@ const idInput = document.getElementById('plano-id');
 const cancelarBtn = document.getElementById('cancelar-btn');
 const formTitulo = document.getElementById('form-titulo');
 
-const campos = ['o_que', 'por_que', 'onde', 'quando', 'quem', 'como', 'quanto_custa', 'status'];
+const campos = ['o_que', 'por_que', 'onde', 'quando', 'quem', 'como', 'status'];
 
 const statusLabel = {
   pendente: 'Pendente',
@@ -32,7 +32,7 @@ function renderizarPlanos(planos) {
       <h3>${escapeHtml(p.o_que)}</h3>
       ${p.por_que ? `<div class="linha"><b>Por quê:</b> ${escapeHtml(p.por_que)}</div>` : ''}
       <div class="linha"><b>Onde:</b> ${escapeHtml(p.onde || '-')} &nbsp; <b>Quando:</b> ${escapeHtml(p.quando || '-')}</div>
-      <div class="linha"><b>Quem:</b> ${escapeHtml(p.quem || '-')} &nbsp; <b>Quanto custa:</b> ${escapeHtml(p.quanto_custa || '-')}</div>
+      <div class="linha"><b>Quem:</b> ${escapeHtml(p.quem || '-')}</div>
       ${p.como ? `<div class="linha"><b>Como:</b> ${escapeHtml(p.como)}</div>` : ''}
       <div class="card-acoes">
         <button class="editar">Editar</button>
