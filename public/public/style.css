@@ -1,0 +1,120 @@
+:root {
+  --azul: #1e40af;
+  --azul-claro: #eff6ff;
+  --texto: #1f2937;
+  --borda: #d1d5db;
+  --verde: #16a34a;
+  --amarelo: #d97706;
+  --cinza: #6b7280;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  background: #f9fafb;
+  color: var(--texto);
+}
+
+header {
+  background: var(--azul);
+  color: white;
+  padding: 1.5rem 2rem;
+}
+
+header h1 { margin: 0; font-size: 1.5rem; }
+.subtitulo { margin: 0.25rem 0 0; opacity: 0.85; font-size: 0.9rem; }
+
+main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.formulario, .lista {
+  background: white;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+h2 { margin-top: 0; font-size: 1.1rem; }
+
+form { display: flex; flex-direction: column; gap: 0.9rem; }
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  font-weight: 600;
+  gap: 0.3rem;
+}
+
+input, textarea, select {
+  font: inherit;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+  font-weight: 400;
+}
+
+textarea { resize: vertical; min-height: 60px; }
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+}
+
+.acoes-form { display: flex; gap: 0.6rem; margin-top: 0.5rem; }
+
+button {
+  padding: 0.55rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--azul);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button.secundario { background: var(--cinza); }
+
+.cards { display: grid; gap: 1rem; }
+
+.card {
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  padding: 1rem;
+  display: grid;
+  gap: 0.4rem;
+  background: var(--azul-claro);
+}
+
+.card h3 { margin: 0; font-size: 1rem; }
+
+.card .linha { font-size: 0.85rem; }
+.card .linha b { font-weight: 600; }
+
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+  width: fit-content;
+}
+
+.badge.pendente { background: var(--amarelo); }
+.badge.em_andamento { background: var(--azul); }
+.badge.concluido { background: var(--verde); }
+
+.card-acoes { display: flex; gap: 0.5rem; margin-top: 0.4rem; }
+.card-acoes button { padding: 0.35rem 0.8rem; font-size: 0.8rem; }
+.card-acoes .excluir { background: #dc2626; }
+
+.vazio { color: var(--cinza); font-size: 0.9rem; }
